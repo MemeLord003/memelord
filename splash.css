@@ -1,0 +1,21 @@
+body  {
+	font-family: 'Comic Sans MS', cursive, 'sans-serif';
+	height: 110%;
+	margin: 0;
+	text-align: center;
+	width: 110%;
+	background-image: url("bg.jpg");
+}
+
+
+h1    {
+	font-family: 'Comic Sans MS', cursive, 'sans-serif';
+	height: 90%;
+	margin: 0;
+	text-align: center;
+        width: 90%;
+}
+
+body {
+    background-image: url("paper.gif");
+}

@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<div class="icon-bar">
+  <a href="index.html"><i class="fa fa-globe"></i></a>
+  <a class="active" href="clicker.html"><i class="fa fa-home"></i></a>
+  <a href="cc.html"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+		</div>
+<h3><button onclick="hackClick(1)">Click</button> Money: <span id="money">0</span></h3>
+		<h3>Store</h3>
+		<p>Autoclicker: <span id="autoclicker">0</span>
+<style>
+body {margin:0;}
+
+.icon-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    width: 20%;
+    padding: 12px 0;
+    float: left;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+</style>
+
+</head>
+	<body>
+		<button onclick="buyAutoclicker()">Buy Autoclicker</button> Cost: <span id="buyAutoclicker">10</span>
+		<script>
+			var money = 0;
+			var autoclicker = 0;
+			var ad = 0;
+			
+			function hackClick(number){
+				money = money + number;
+				document.getElementById("money").innerHTML = money;
+			};
+			function buyAutoclicker(){
+				var buyAutoclicker = Math.floor(10 * Math.pow(3.2, autoclicker));
+				if (money >=buyAutoclicker){
+					autoclicker = autoclicker + 1;
+					money = money - buyAutoclicker;
+					document.getElementById('autoclicker').innerHTML = autoclicker;
+					document.getElementById('money').innerHTML = money;
+				};
+					var nextCost = Math.floor(10 * Math.pow(3.2, autoclicker));
+					document.getElementById('buyAutoclicker').innerHTML = nextCost;
+			};
+			
+			window.setInterval(function(){
+				hackClick(autoclicker);
+				}, 1000);
+		
+		</script>
+		<p>		(+1 Money per Second)
+		<p>AdvancedClicker: <span id="Ad">0</span>
+		<button onclick="buyAd()">Buy Advanced Clicker</button> Cost: <span id="buyAd">100</span>
+		<script>
+			var money = 0;
+			var ad = 0;
+			
+			function hackClick(number){
+				money = money + number;
+				document.getElementById("money").innerHTML = money;
+			};
+			function buyAd(){
+				var buyAd = Math.floor(100 * Math.pow(3.2, ad));
+				if (money >=buyAd){
+					ad = ad + 1;
+					money = money - buyAd;
+					document.getElementById('ad').innerHTML = ad;
+					document.getElementById('money').innerHTML = money;
+				};
+					var nextCost = Math.floor(100 * Math.pow(3.2, ad));
+					document.getElementById('buyAd').innerHTML = nextCost;
+			};
+			
+			window.setInterval(function(){
+				hackClick(ad);
+				}, 250);
+</script>
+		<p>		(+4 Money per Second)
+</body>
+</html>

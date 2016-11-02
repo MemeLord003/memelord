@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="splash.css">
+<style>
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+body {margin:0;}
+
+.icon-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    width: 20%;
+    padding: 12px 0;
+    float: left;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+</style>
+
+</head>
+<body>
+
+<div class="icon-bar">
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+  <a href="clicker.html"><i class="fa fa-search"></i></a>
+  <a href="cc.html"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+
+<div class="hero">
+<h1>Welcome to my Basic Site</h1>
+<p>
+<div class="dropdown">
+  <button class="dropbtn">Select Link</button>
+  <div class="dropdown-content">
+    <a href="clicker.html">Clicker</a>
+    <a href="cc.html">Cookie Clicker</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
